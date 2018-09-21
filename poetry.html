@@ -6,37 +6,57 @@
         <style>
         body{
           font-family:cursive;
+          background:url("img/hauntedhouse.jpg");
+          background-position: center;
+          background-size: cover;
         }
         h1{
           text-align:center;
+           background-color:gray;
+           width:50%;
+           margin-left:500px;
+           color:#fff;
+           opacity:0.8;
         }
         #poem{
         margin-left:400px;
         border:2px dotted black;
         width:60%;
         border-radius:24px;
-
+        background-color:#fff;
         }
         #word{
           margin-left:500px;
+          background-color:lightgray;
+          width:50%;
+          margin-top:10px;
+          border:1px solid gray;
+          border-radius:20px;
+          padding-left:10px;
         }
         dt{
           font-weight:bold;
         }
+        pre::first-letter{
+          color:gray;
+          font-size:40px;
+          font-weight:bold;
+        }
         </style>
+
     </head>
     <body>
       <h1>Two's Company</h1>
 <div id="poem">
       <pre>
-        They said the house was haunted, but
+        <span class="first">They</span> said the house was haunted, but
         he laughed at them and said, ‘Tut, tut!’
         I never heard such tittle-tattle
         as ghosts that groan and chains that rattle;
         And just to prove I’m in the right,
         please leave me here to spend the night.
 
-                                    They winked absurdly, tried to smother
+                                    <span class="first">They</span> winked absurdly, tried to smother
                                     their ignorant laughter, nudged each other,
                                     and left him just as dusk was falling
                                     with a hunchback moon and screech owls calling.
