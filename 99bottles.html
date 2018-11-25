@@ -30,20 +30,20 @@
   }
 
 
-  #number,#n1{
+  .number{
     color:#EF2929;
     font-weight:bold;
     border:1px dashed #EF2929;
 
   }
-  #newnum,#n2{
+  #newnum{
     color:#A40000;
     background-color:#FCE94F;
     font-weight:bold;
     border:1px dashed #EF2929;
 
   }
-  #remain{
+  .remain{
     color:#FFFFFF;
     background-color:#EF2929;
     font-weight:bold;
@@ -77,7 +77,7 @@
     border-color:#EF2929;
     border-style:solid;
     border-radius:2px;
-    width:50%;
+    width:70%;
     margin:0 auto;
     padding-left:15%;
     font-size:1em;
@@ -91,6 +91,7 @@
 h1{
   margin-left:1%;
   width:60%;
+  text-align:center;
 }
   </style>
 </head>
@@ -124,8 +125,8 @@ h1{
 j=i-1;
 
 
-  text.innerHTML+="<pre><span id='number'>"+i+"</span> "+bottle+" of beer on the wall. "+"<span id='newnum'>"+ i+"</span> "+bottle+" of beer. Take one down and pass it around</pre>";
-  text.innerHTML+="<pre><span id='remain'>"+j+"</span> "+bottle1+" of beer on the wall.</pre>";
+  text.innerHTML+="<pre><span class='number'>"+i+"</span> "+bottle+" of beer on the wall. "+"<span id='newnum'>"+ i+"</span> "+bottle+" of beer. Take one down and pass it around</pre>";
+  text.innerHTML+="<pre><span class='remain'>"+j+"</span> "+bottle1+" of beer on the wall.</pre>";
   text.innerHTML+="<br>";
   if(i==2){
     bottle="Bottle";
@@ -149,8 +150,8 @@ j=i-1;
 function endve(){
 
  var newtext=document.getElementById('end');
-  newtext.innerHTML+="<pre><span id='n1'> No </span> more bottles of beer on the wall,";
-  newtext.innerHTML+="<pre><span id='n2'> No </span> more bottles of beer.</pre>";
+  newtext.innerHTML+="<pre><span class='number'> No </span> more bottles of beer on the wall,";
+  newtext.innerHTML+="<pre><span class='remain'> No </span> more bottles of beer.</pre>";
 newtext.innerHTML+="<pre> Go to the store and buy some more,</pre>";
 newtext.innerHTML+="<pre><span id='last'> 99 bottles of beer on the wall.</span></pre>";
 
