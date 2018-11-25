@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>99 bottles of beer</title>
+
+  <style>
+
+  button{
+    background-color:#EF2929;
+    padding:1%;
+    border:2px solid black;
+    border-radius:15px;
+    color:#FFFFFF;
+    margin-left:4%;
+    font-weight:bold;
+    font-size:1.2em;
+    margin:2% 4% 2% 2%;
+  }
+  #output{
+
+    border:10px solid #EF2929;
+    padding-left:5%;
+    font-size:1em;
+    padding-top:5%;
+
+    border-radius:20px;
+    padding-left:12%;
+
+  }
+
+
+  #number,#n1{
+    color:#EF2929;
+    font-weight:bold;
+    border:1px dashed #EF2929;
+
+  }
+  #newnum,#n2{
+    color:#A40000;
+    background-color:#FCE94F;
+    font-weight:bold;
+    border:1px dashed #EF2929;
+
+  }
+  #remain{
+    color:#FFFFFF;
+    background-color:#EF2929;
+    font-weight:bold;
+    border:1px dashed #EF2929;
+
+  }
+  #last{
+      font-weight:bold;
+      color:#EF2929;
+      background-color:#FCE94F;
+      padding:1%;
+  }
+  #end{
+    border-width:20px 10px 10px 10px;
+    border-color:#EF2929;
+    border-style:solid;
+    border-radius:5px;
+    width:50%;
+    margin:0 auto;
+    padding-left:15%;
+    font-size:1em;
+    margin-top:-1%;
+    border-top-color:white;
+
+  }
+
+
+  #title{
+    position:relative;
+    border-width:10px 10px 20px 10px;
+    border-color:#EF2929;
+    border-style:solid;
+    border-radius:2px;
+    width:50%;
+    margin:0 auto;
+    padding-left:15%;
+    font-size:1em;
+    margin-bottom:-12px;
+    box-sizing:border-box;
+    border-bottom-color:white !important;
+
+  }
+
+
+h1{
+  margin-left:1%;
+  width:60%;
+}
+  </style>
+</head>
+
+<body>
+  <center>  <button type="button" onclick="poem()">Display Poem</button></center>
+  <div id="title">
+
+      <h1 style="color:red;background-color:yellow;">99 Bottles Of Beer </h1>
+  </div>
+
+  <!--Poem container-->
+
+  <div id="output">
+  </div>
+  <div id="end">
+  </div>
+  <!--end of poem-->
+
+  <script>
+  var i;
+  var j;
+  var text;
+  var bottle="Bottles"
+  var bottle1="Bottles"
+  function poem(){
+
+   text=document.getElementById('output');
+    for(i=99;i>0;i--){
+
+j=i-1;
+
+
+  text.innerHTML+="<pre><span id='number'>"+i+"</span> "+bottle+" of beer on the wall. "+"<span id='newnum'>"+ i+"</span> "+bottle+" of beer. Take one down and pass it around</pre>";
+  text.innerHTML+="<pre><span id='remain'>"+j+"</span> "+bottle1+" of beer on the wall.</pre>";
+  text.innerHTML+="<br>";
+  if(i==2){
+    bottle="Bottle";
+
+
+  }
+  if(i==3)
+  {
+    bottle1="Bottle"
+  }
+
+  if(j==0)
+  {
+
+    endve();
+
+  }
+  }
+}
+
+function endve(){
+
+ var newtext=document.getElementById('end');
+  newtext.innerHTML+="<pre><span id='n1'> No </span> more bottles of beer on the wall,";
+  newtext.innerHTML+="<pre><span id='n2'> No </span> more bottles of beer.</pre>";
+newtext.innerHTML+="<pre> Go to the store and buy some more,</pre>";
+newtext.innerHTML+="<pre><span id='last'> 99 bottles of beer on the wall.</span></pre>";
+
+
+}
+
+
+
+</script>
+</body>
+</html>
